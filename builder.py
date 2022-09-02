@@ -5,3 +5,14 @@
     starts running into a separate terminal
 
 """
+
+
+class Builder:
+
+    def __init__(self, path):
+        self.PATH_TO_BUILD = path
+        print("---------[BUILD STARTING]---------")
+        print("[*] Building project in ->", self.PATH_TO_BUILD)
+
+    def copying_path_tree(self):
+        pass

@@ -21,3 +21,9 @@
         More than happy to accept your thoughts!.
 
 """
+import os
+
+
+class Main:
+    def __init__(self):
+        pass

@@ -22,8 +22,13 @@
 
 """
 import os
+from Data import data
 
 
 class Main:
     def __init__(self):
-        pass
+        data.Data()
+
+
+if __name__ == "__main__":
+    Main()

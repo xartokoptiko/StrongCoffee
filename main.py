@@ -22,7 +22,10 @@
 
 """
 import os
+import sys
+
 from Data import data
+from resources.values import *
 
 
 class Main:
@@ -32,51 +35,60 @@ class Main:
         self.data_base.save_new_project("project_two", "/path/two")
         self.data_base.save_new_project("project_three", "/path/three")
 
-        print("~~~ [Strong Coffee Builder] ~~~")
         while True:
-            print("""
--------------------
-[1] See & Select Projects
-[2] Create Project
-[3] About
-[4] Help
-[5] Safe Exit
--------------------
-            """)
+            print(main_start_message)
             command = int(input(">>>"))
             if command == 1:
                 self.see_projects()
+            elif command == 2:
+                # TODO()
+                print("[*]  Creating project")
+            elif command == 3:
+                # TODO()
+                print("[*] About Description")
+            elif command == 4:
+                # TODO()
+                print("[*] Help text")
+            elif command == 5:
+                print("[*] Exiting Strong Coffee...")
+                self.data_base.close_connection()
+                print("~~~~~~~~~~[Good Bye !]~~~~~~~~~~")
+                sys.exit(0)
+
             else:
                 print("[*] Invalid command ->", command)
-            
+
     def see_projects(self):
         projects = self.data_base.get_projects()
         print("-----[Projects]------")
+
         for project in projects:
-            print("-[{}] {}".format( projects.index(project) ,project[0]))
+            print("-[{}] {}".format(projects.index(project), project[0]))
+
         print("-[b] Back")
         command = input(">>>")
+
         if command == "b":
             Main()
-        else :
+        else:
             self.selected_project(projects[int(command)])
 
     def selected_project(self, project):
-        print("""
---------[{}]--------
---[1] build Project
---[2] Build & Run Project
---[b] Back
-        """.format(project[0]))
+        print(project_options.format(project[0]))
         command = input(">>>")
+
         if command == "b":
-            self.see_projects
+            self.see_projects()
 
         elif int(command) == 1:
+            # TODO()
             print("BUILDING!!!!!", project[0])
 
         elif int(command) == 2:
+            # TODO()
             print("BUILDING AND RUNNING!!!!!!", project[0])
 
+
 if __name__ == "__main__":
+    print("~~~ [Strong Coffee Builder] ~~~")
     Main()

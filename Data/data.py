@@ -34,3 +34,7 @@ class Data:
     def get_projects(self):
         self.cursor.execute("SELECT * FROM Projects")
         return self.cursor.fetchall()
+
+    def close_connection(self):
+        self.connection.close()
+        print("--Connection to Data Base Closed!")

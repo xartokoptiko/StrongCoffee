@@ -90,7 +90,7 @@ class Main:
 
         elif int(command) == 2:
             # TODO()
-            print("BUILDING AND RUNNING!!!!!!", project[0])
+            print("BUILDING AND RUNNING!!!!!", project[0])
             runner.RunProject("")
             self.selected_project(project)
 

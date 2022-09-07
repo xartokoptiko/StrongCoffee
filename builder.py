@@ -5,14 +5,18 @@
     starts running into a separate terminal
 
 """
+import os
+
+
+def copy_and_build_project(path):
+    pass
 
 
 class Builder:
 
-    def __init__(self, path):
-        self.PATH_TO_BUILD = path
+    def __init__(self, project):
+        self.project = project
+        self.PATH_TO_BUILD = "/home/lampros/Projects/Python/StrongCoffee/Project"
         print("---------[BUILD STARTING]---------")
         print("[*] Building project in ->", self.PATH_TO_BUILD)
-
-    def copying_path_tree(self):
-        pass
+        copy_and_build_project(self.PATH_TO_BUILD)

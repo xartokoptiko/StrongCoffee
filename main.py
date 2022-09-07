@@ -1,5 +1,13 @@
-"""
+import os
+import sys
 
+import builder
+import runner
+from Data import data
+from resources.values import *
+
+about = """
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @Author : CoffeeDrinkersTeam
 
     @Description : 
@@ -19,13 +27,8 @@
 
         We did it mostly for practice and test our knowledge. Hope you like it.
         More than happy to accept your thoughts!.
-
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
-import os
-import sys
-
-from Data import data
-from resources.values import *
 
 
 class Main:
@@ -44,8 +47,7 @@ class Main:
                 # TODO()
                 print("[*]  Creating project")
             elif command == 3:
-                # TODO()
-                print("[*] About Description")
+                print(about)
             elif command == 4:
                 # TODO()
                 print("[*] Help text")
@@ -83,10 +85,14 @@ class Main:
         elif int(command) == 1:
             # TODO()
             print("BUILDING!!!!!", project[0])
+            builder.Builder(project)
+            self.selected_project(project)
 
         elif int(command) == 2:
             # TODO()
             print("BUILDING AND RUNNING!!!!!!", project[0])
+            runner.RunProject("")
+            self.selected_project(project)
 
 
 if __name__ == "__main__":

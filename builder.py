@@ -22,10 +22,10 @@ def copy_and_build_project(path):
                 for name in files:
                     print(name)
                     if pathlib.Path(name).suffix == ".java":
-                        print("[*] Building file ["+ name+"]")
+                        print("[*] Building file [" + name+"]")
 
-        else :
-            print("WTF")
+        else:
+            print("[ERROR] Something went wrong building the project")
 
 
 class Builder:

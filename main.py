@@ -8,7 +8,7 @@ from resources.values import *
 
 about = """
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @Author : CoffeeDrinkersTeam
+    @Author : lamproskarachristos@yahoo.com
 
     @Description : 
         - Having an old yet lovely Computer ?
@@ -20,7 +20,7 @@ about = """
         people who respect themselves ,which we and you are clearly not. Simply use our great
         with no bugs at all open source code to do the job. <3 !
 
-        -Now that we laughed(not) with my humor. This is an open-source code
+        -This is an open-source code
         that simply does the dirty work for you when writing code with java, something 
         like what InteliJ idea does when you hit the run button, but those guys really
         know what they're doing unlike us.

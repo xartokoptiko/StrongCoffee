@@ -1,8 +1,6 @@
-import os
 import sys
 
-import builder
-import runner
+from build_utils import builder, runner
 from Data import data
 from resources.values import *
 
